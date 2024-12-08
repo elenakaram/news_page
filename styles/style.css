@@ -1,0 +1,155 @@
+/* reset browser default settings */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* configuring header style */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    /* background picture in the header*/
+    background: url(https://cdn.pixabay.com/photo/2023/03/21/20/39/facade-7868160_960_720.jpg) bottom no-repeat;
+    background-size: cover;
+}
+
+/* style or the main title */
+h1 {
+    color: chocolate;
+    font-size: 4em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* style for the marquee bar*/
+.bar {
+    display: flex;
+    height: 7vh;
+    margin: 0;
+    background: linear-gradient(rgb(214, 101, 20), rgb(232, 202, 171));
+}
+
+/* marquee style */
+.marquee {
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(169, 39, 39);
+    text-transform: uppercase;
+    animation-direction: alternate;     /* marquee direction from right to the left */
+    animation-iteration-count: infinite;
+    animation: run 10s linear infinite;
+}
+
+/* CSS instruction for marquee */
+@keyframes run {
+    from {
+        margin-left: 50%;
+        width: 50%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+/* foter style*/
+footer {
+    padding-top: 20px;
+    padding-bottom: 60px;
+    text-align: center;
+    background-color: rgb(130, 174, 195);
+}
+
+footer .links {
+    margin-bottom: 50px;
+}
+
+/* footer links style */
+footer .links>a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* copyright symbol style */
+.copyright {
+    color: rgb(108, 117, 125);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* page style */
+.news {
+    background-color: #fff;
+    padding: 50px 0 32px;
+    padding-left: 200px;     /* moving articles to be displayed 200px from the left */
+}
+
+/* style for articles blocks */
+article {
+    display: inline-block;
+    width: 420px;
+    height: 420px;
+    margin: 0 10px 32px;
+    padding: 6px 15px;
+    border: 1px solid chocolate;
+    border-radius: 20px;
+    vertical-align: middle;
+}
+
+/* style for links to the articles */
+article a {
+    color: #4366e5;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* color for the links of the visited articles */
+article a:visited {
+    color: #626be7;
+}
+
+/* color for the pointed articles titles */
+article a:hover {
+    color: #a1001b;
+}
+
+/* style for articles titles */
+article h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 5px;
+}
+
+/* style for the articles meta-data */
+.article-meta {
+    color: rgb(108, 123, 121);
+    margin-bottom: 5px;
+}
+
+/* image style */
+article img {
+    width: 100%;
+    height: 200px;
+    object-fit: scale-down;
+    border-radius: 20px;     /* radius for artice borders */
+}
+
+/* style for the bit 'NEW' in the beggining of the srticle name */
+.newadd::before {
+    content: 'NEW! ';
+    font-weight: bold;
+    color: red;
+}
+
+/* style for each 2nd article */
+article:nth-child(even) {
+    background-color: rgb(147, 155, 176);
+}
